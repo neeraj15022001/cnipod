@@ -4,15 +4,17 @@ import "./App.css";
 function App() {
   return (
     <div className="app">
-      <IpodBody />
-      <IpodBody
-        additionalStyle={{
-          transform: "rotate(180deg)",
-          opacity: 0.2,
-          position: "absolute",
-          bottom: -390,
-        }}
-      />
+      <div className="ipod-container">
+        <IpodBody />
+        <IpodBody
+          additionalStyle={{
+            transform: "rotate(180deg)",
+            opacity: 0.2,
+            position: "absolute",
+            bottom: -500,
+          }}
+        />
+      </div>
     </div>
   );
 }

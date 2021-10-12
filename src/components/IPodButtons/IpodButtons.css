@@ -1,5 +1,47 @@
 .buttons-container {
-    height: 50%;
-    background-color: red;
-    box-sizing: border-box;
+  height: 50%;
+  box-sizing: border-box;
+  display: grid;
+  place-items: center;
+}
+.buttons-rotater {
+  width: 200px;
+  height: 200px;
+  background-color: white;
+  border-radius: 50%;
+  display: grid;
+  place-items: center;
+  position: relative;
+}
+.rotater-center {
+  width: 100px;
+  height: 100px;
+  background-color: silver;
+  border-radius: 50%;
+}
+.rotater-button {
+  position: absolute;
+  background-color: transparent;
+  border: 0;
+  font-size: 1.1rem;
+}
+.menu {
+  top: 15px;
+  left: 50%;
+  transform: translateX(-50%);
+}
+.seek-next {
+  right: 10px;
+  top: 50%;
+  transition: translateY(-50%);
+}
+.seek-prev {
+  left: 10px;
+  top: 50%;
+  transform: translateY(-50%);
+}
+.play-pause {
+  bottom: 10px;
+  left: 50%;
+  transform: translateX(-50%);
 }

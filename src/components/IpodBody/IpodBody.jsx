@@ -8,8 +8,8 @@ function IpodBody({ additionalStyle = {} }) {
   return (
     <div className="main-container">
       <div className="ipod-body" style={additionalStyle}>
-          <IpodScreen />
-          <IpodButtons />
+        <IpodScreen />
+        <IpodButtons />
       </div>
     </div>
   );

@@ -1,4 +1,9 @@
 .app {
   height: 100vh;
   overflow: hidden;
+  display: grid;
+  place-items: center;
+}
+.ipod-container {
+  position: relative;
 }
