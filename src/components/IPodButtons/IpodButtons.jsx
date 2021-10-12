@@ -1,7 +1,11 @@
 import React from "react";
 import "./IpodButtons.css";
-import { GrChapterNext, GrChapterPrevious, GrPlay } from "react-icons/gr";
 import ZingTouch from "zingtouch";
+import {
+  SkipBackwardFill,
+  SkipEndFill,
+  SkipForwardFill,
+} from "react-bootstrap-icons";
 
 class IpodButtons extends React.Component {
   componentDidMount() {
@@ -50,13 +54,13 @@ class IpodButtons extends React.Component {
               <span className="button-icons">MENU</span>
             </button>
             <button className="seek-next rotater-button">
-              <GrChapterNext className="button-icons" />
+              <SkipForwardFill color="silver" className="button-icons" />
             </button>
             <button className="seek-prev rotater-button">
-              <GrChapterPrevious className="button-icons" />
+              <SkipBackwardFill color="silver" className="button-icons" />
             </button>
             <button className="play-pause rotater-button">
-              <GrPlay className="button-icons" />
+              <SkipEndFill color="silver" className="button-icons" />
             </button>
           </div>
         </div>

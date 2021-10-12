@@ -33,6 +33,11 @@
   background-color: transparent;
   font-size: 1.3rem;
   user-select: none;
+  color: silver;
+}
+.button-icons {
+  width: 1.3rem !important;
+  height: 1.3rem !important;
 }
 .menu {
   top: 20px;

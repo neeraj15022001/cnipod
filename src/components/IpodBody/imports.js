@@ -2,6 +2,7 @@ import IpodScreen from "../IpodScreen/IpodScreen.jsx";
 import IpodButtons from "../IPodButtons/IpodButtons";
 import HalfScreenWithList from "../../screens/HalfScreenWithList/HalfScreenWithList.jsx";
 import FullScreen from "../../screens/FullScreen/FullScreen";
+import Player from "../../screens/Player/Player.jsx";
 const Home = ({ isActive }) => {
   return (
     <HalfScreenWithList
@@ -39,4 +40,13 @@ const Games = () => {
     />
   );
 };
-export { IpodScreen, IpodButtons, Home, CoverFlow, Music, Settings, Games };
+export {
+  IpodScreen,
+  IpodButtons,
+  Home,
+  CoverFlow,
+  Music,
+  Settings,
+  Games,
+  Player,
+};

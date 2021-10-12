@@ -8,6 +8,7 @@ import {
   Music,
   Settings,
   Games,
+  Player,
 } from "./imports";
 import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 
@@ -37,6 +38,9 @@ function IpodBody({ additionalStyle = {}, isActive = true }) {
             </Route>
             <Route path="/settings">
               <IpodScreen isActive={isActive} subComponent={<Settings />} />
+            </Route>
+            <Route path="/allSongs">
+              <IpodScreen isActive={isActive} subComponent={<Player />} />
             </Route>
           </Switch>
         </Router>

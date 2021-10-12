@@ -1,0 +1,60 @@
+.player-container {
+  height: 100%;
+  width: 100%;
+  border-radius: 8px;
+}
+.player-content {
+  height: 140px;
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+}
+.song-image-container {
+  width: 75px;
+  height: 75px;
+  background: #fff
+    url("http://a10.gaanacdn.com/images/albums/41/1697241/crop_480x480_1697241.jpg")
+    no-repeat center center;
+  background-size: cover;
+}
+.song-description-container {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: center;
+  padding: 0 8px;
+}
+.song-description-container > h4,
+.song-description-container > p {
+  padding: 0;
+  margin: 0;
+}
+.song-description-container > p {
+  font-size: 0.8rem;
+}
+.player-seeker {
+  display: grid;
+  place-items: center;
+  padding: 0 16px;
+}
+.player {
+  width: 100%;
+}
+.player > input[type="range"] {
+  width: 100%;
+  position: relative;
+}
+.player > input[type="range"]::after {
+  content: "3:42";
+  position: absolute;
+  top: 16px;
+  right: 0;
+  font-size: 0.7rem;
+}
+.player > input[type="range"]::before {
+  content: "0:00";
+  position: absolute;
+  top: 16px;
+  left: 0;
+  font-size: 0.7rem;
+}

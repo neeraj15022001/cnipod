@@ -6,8 +6,7 @@
   right: 0;
   background-color: white;
   z-index: 2;
-  padding: 20px;
-  border-radius: 8px 0 0 8px;
+  border-radius: 8px;
   box-sizing: border-box;
   display: grid;
   place-items: center;
