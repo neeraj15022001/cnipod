@@ -14,34 +14,43 @@
   position: relative;
 }
 .rotater-center {
-  width: 100px;
-  height: 100px;
+  width: 75px;
+  height: 75px;
   background-color: silver;
   border-radius: 50%;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+.buttons-container-element {
+  height: 200px;
+  width: 200px;
 }
 .rotater-button {
   position: absolute;
-  background-color: transparent;
   border: 0;
-  font-size: 1.1rem;
+  background-color: transparent;
+  font-size: 1.3rem;
+  user-select: none;
 }
 .menu {
-  top: 15px;
+  top: 20px;
   left: 50%;
   transform: translateX(-50%);
 }
 .seek-next {
-  right: 10px;
+  right: 15px;
   top: 50%;
-  transition: translateY(-50%);
+  transform: translateY(-50%);
 }
 .seek-prev {
-  left: 10px;
+  left: 15px;
   top: 50%;
   transform: translateY(-50%);
 }
 .play-pause {
-  bottom: 10px;
+  bottom: 15px;
   left: 50%;
   transform: translateX(-50%);
 }

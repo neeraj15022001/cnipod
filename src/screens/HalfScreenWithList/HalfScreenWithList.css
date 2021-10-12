@@ -1,0 +1,41 @@
+.screen-menu {
+  position: absolute;
+  left: 0;
+  top: 0;
+  bottom: 0;
+  width: 50%;
+  background-color: white;
+  z-index: 2;
+  padding: 20px;
+  border-radius: 8px 0 0 8px;
+  box-sizing: border-box;
+}
+
+.screen-menu-headline {
+  margin: 8px 0;
+  font-weight: 800;
+}
+.screen-menu-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+.screen-menu-list-items {
+  text-transform: capitalize;
+  padding: 4px;
+  font-size: 0.8rem;
+  position: relative;
+}
+.active-item {
+  background-color: lightblue;
+  font-weight: bold;
+}
+.active-item::after {
+  background-color: lightblue;
+  content: ">";
+  position: absolute;
+  right: -8px;
+  top: 50%;
+  padding: 4px;
+  transform: translateY(-50%);
+}

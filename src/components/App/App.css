@@ -1,8 +1,10 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&display=swap");
 .app {
   height: 100vh;
   overflow: hidden;
   display: grid;
   place-items: center;
+  font-family: "Poppins", sans-serif;
 }
 .ipod-container {
   position: relative;

@@ -13,6 +13,7 @@ function App() {
             position: "absolute",
             bottom: -500,
           }}
+          isActive={false}
         />
       </div>
     </div>

@@ -1,0 +1,27 @@
+.screen-menu-fullscreen {
+  position: absolute;
+  left: 0;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  background-color: white;
+  z-index: 2;
+  padding: 20px;
+  border-radius: 8px 0 0 8px;
+  box-sizing: border-box;
+  display: grid;
+  place-items: center;
+}
+.screen-menu-headline-fullscreen {
+  text-transform: capitalize;
+  font-weight: 700;
+}
+.screen-menu-content-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+.sreen-menu-image {
+  width: 100px;
+}
