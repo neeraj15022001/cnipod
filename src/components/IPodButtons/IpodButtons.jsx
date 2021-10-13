@@ -7,8 +7,15 @@ import {
   SkipForwardFill,
 } from "react-bootstrap-icons";
 import Tilt from "react-tilt";
+import { Link } from "react-router-dom";
 
 class IpodButtons extends React.Component {
+  constructor() {
+    super();
+    this.state = {
+      path: "/coverflow",
+    };
+  }
   componentDidMount() {
     const { isActive } = this.props;
     if (isActive) {
@@ -19,20 +26,25 @@ class IpodButtons extends React.Component {
         const buttons = document.querySelectorAll(".screen-menu-list-items");
         for (let i = 0; i < buttons.length; i++) {
           if (buttons[i].classList.contains("active-item")) {
-            // console.log(i);
-            buttons[i].classList.remove("active-item");
-            if (event.detail.distanceFromLast > 0) {
-              if (i === 3) {
-                i = -1;
+            if (event.detail.distanceFromOrigin % 15 > 14) {
+              buttons[i].classList.remove("active-item");
+              if (event.detail.distanceFromLast > 0) {
+                if (i === buttons.length) {
+                  i = -1;
+                }
+                buttons[i + 1].classList.add("active-item");
+                console.log(buttons[i + 1].innerHTML);
+                this.setState({ path: `/${buttons[i + 1].innerHTML}` });
+              } else {
+                if (i === 0) {
+                  i = buttons.length + 1;
+                }
+                buttons[i - 1].classList.add("active-item");
+                console.log(buttons[i - 1].innerHTML);
+                this.setState({ path: `/${buttons[i - 1].innerHTML}` });
               }
-              buttons[i + 1].classList.add("active-item");
-            } else {
-              if (i === 0) {
-                i = 4;
-              }
-              buttons[i - 1].classList.add("active-item");
+              break;
             }
-            break;
           }
         }
       });
@@ -45,24 +57,21 @@ class IpodButtons extends React.Component {
     var childElement = document.querySelector(".buttons-container-element");
     activeRegion.unbind(childElement, "rotate");
   }
-  selectOption = () => {
-    const listItems = document.querySelectorAll(".screen-menu-list-items");
-    for (let i = 0; i < listItems.length; i++) {
-      if (listItems[i].classList.contains("active-item")) {
-        console.log(listItems[i].innerHTML);
-      }
-    }
-  };
-  takeHome = () => {};
   render() {
     return (
       <div className="buttons-container">
         <Tilt options={{ max: -25 }} style={{ height: 200, width: 200 }}>
           <div className="buttons-rotater">
-            <div className="rotater-center" onClick={this.selectOption}></div>
+            <Link to={this.state.path}>
+              <div className="rotater-center"></div>
+            </Link>
             <div className="buttons-container-element">
               <button className="menu rotater-button" onClick={this.takeHome}>
-                <span className="button-icons">MENU</span>
+                <span>
+                  <Link className="button-label" to="/">
+                    MENU
+                  </Link>
+                </span>
               </button>
               <button className="seek-next rotater-button">
                 <SkipForwardFill color="silver" className="button-icons" />

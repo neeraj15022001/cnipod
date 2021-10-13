@@ -43,8 +43,8 @@ function IpodBody({ additionalStyle = {}, isActive = true }) {
               <IpodScreen isActive={isActive} subComponent={<Player />} />
             </Route>
           </Switch>
+          <IpodButtons isActive={isActive} />
         </Router>
-        <IpodButtons isActive={isActive} />
       </div>
     </div>
   );

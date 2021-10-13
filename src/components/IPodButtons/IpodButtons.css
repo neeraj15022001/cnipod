@@ -43,6 +43,10 @@
   width: 1.3rem !important;
   height: 1.3rem !important;
 }
+.button-label {
+  text-decoration: none;
+  color: silver;
+}
 .menu {
   top: 20px;
   left: 50%;
