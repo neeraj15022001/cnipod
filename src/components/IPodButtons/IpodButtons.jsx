@@ -6,6 +6,7 @@ import {
   SkipEndFill,
   SkipForwardFill,
 } from "react-bootstrap-icons";
+import Tilt from "react-tilt";
 
 class IpodButtons extends React.Component {
   componentDidMount() {
@@ -44,26 +45,37 @@ class IpodButtons extends React.Component {
     var childElement = document.querySelector(".buttons-container-element");
     activeRegion.unbind(childElement, "rotate");
   }
+  selectOption = () => {
+    const listItems = document.querySelectorAll(".screen-menu-list-items");
+    for (let i = 0; i < listItems.length; i++) {
+      if (listItems[i].classList.contains("active-item")) {
+        console.log(listItems[i].innerHTML);
+      }
+    }
+  };
+  takeHome = () => {};
   render() {
     return (
       <div className="buttons-container">
-        <div className="buttons-rotater">
-          <div className="rotater-center"></div>
-          <div className="buttons-container-element">
-            <button className="menu rotater-button">
-              <span className="button-icons">MENU</span>
-            </button>
-            <button className="seek-next rotater-button">
-              <SkipForwardFill color="silver" className="button-icons" />
-            </button>
-            <button className="seek-prev rotater-button">
-              <SkipBackwardFill color="silver" className="button-icons" />
-            </button>
-            <button className="play-pause rotater-button">
-              <SkipEndFill color="silver" className="button-icons" />
-            </button>
+        <Tilt options={{ max: -25 }} style={{ height: 200, width: 200 }}>
+          <div className="buttons-rotater">
+            <div className="rotater-center" onClick={this.selectOption}></div>
+            <div className="buttons-container-element">
+              <button className="menu rotater-button" onClick={this.takeHome}>
+                <span className="button-icons">MENU</span>
+              </button>
+              <button className="seek-next rotater-button">
+                <SkipForwardFill color="silver" className="button-icons" />
+              </button>
+              <button className="seek-prev rotater-button">
+                <SkipBackwardFill color="silver" className="button-icons" />
+              </button>
+              <button className="play-pause rotater-button">
+                <SkipEndFill color="silver" className="button-icons" />
+              </button>
+            </div>
           </div>
-        </div>
+        </Tilt>
       </div>
     );
   }
