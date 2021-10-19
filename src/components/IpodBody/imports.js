@@ -15,6 +15,12 @@ const Home = ({ isActive }) => {
 const CoverFlow = () => {
   return <FullScreen title="coverflow" />;
 };
+const Artists = () => {
+  return <FullScreen title="artists" />;
+};
+const Albums = () => {
+  return <FullScreen title="albums" />;
+};
 const Music = ({ isActive }) => {
   return (
     <HalfScreenWithList
@@ -49,4 +55,6 @@ export {
   Settings,
   Games,
   Player,
+  Artists,
+  Albums,
 };
