@@ -29,9 +29,11 @@
 .active-item {
   background-color: lightblue;
   font-weight: bold;
+  color: dodgerblue;
 }
 .active-item::after {
   background-color: lightblue;
+  color: dodgerblue;
   content: ">";
   position: absolute;
   right: -8px;

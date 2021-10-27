@@ -1,4 +1,4 @@
-import React from "react";
+import React, {useState} from "react";
 import "./IpodBody.css";
 import {
   IpodScreen,
@@ -43,7 +43,7 @@ function IpodBody({ additionalStyle = {}, isActive = true }) {
               <IpodButtons isActive={isActive} renderedFrom="/games" />
             </Route>
             <Route path="/settings">
-              <IpodScreen isActive={isActive} subComponent={<Settings />} />
+              <IpodScreen isActive={isActive} subComponent={<Settings isActive={isActive} />} />
               <IpodButtons isActive={isActive} renderedFrom="/settings" />
             </Route>
             <Route path="/allSongs">

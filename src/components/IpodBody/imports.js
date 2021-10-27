@@ -24,7 +24,7 @@ const Albums = () => {
 const Music = ({ isActive }) => {
   return (
     <HalfScreenWithList
-      title="iPod.js"
+      title="Music"
       listItems={["allSongs", "artists", "albums"]}
       isActive={isActive}
     />
